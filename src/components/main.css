@@ -1,0 +1,88 @@
+/* Fullscreen container */
+.main-container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+  
+  /* Background image styling */
+  .background-image {
+    background-image: url('../images/home-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(8px);
+  }
+  
+  /* Sliding text styling */
+  .sliding-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+  
+  /* Slide-in from right animation */
+  @keyframes slide-in-right {
+    from {
+      transform: translate(100%, -50%);
+      opacity: 0;
+    }
+    to {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+  }
+  
+  /* Slide-out to left animation */
+  @keyframes slide-out-left {
+    from {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+    to {
+      transform: translate(-100%, -50%);
+      opacity: 0;
+    }
+  }
+  
+  /* Apply slide-in and slide-out animations */
+  .slide-in {
+    animation: slide-in-right 1s ease forwards;
+  }
+  
+  .slide-out {
+    animation: slide-out-left 1s ease forwards;
+  }
+  
+  .get-started-button {
+    position: absolute;
+    bottom: 150px; /* Distance from the bottom of the viewport */
+    left: 50%;
+    transform: translateX(-50%); /* Centers the button horizontally */
+    padding: 12px 24px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--textColor);
+    background-color: var(--button-background);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .get-started-button:hover {
+    background-color: #0056b3;
+  }
+  

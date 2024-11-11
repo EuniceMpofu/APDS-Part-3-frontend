@@ -1,0 +1,25 @@
+:root {
+    scroll-behavior: smooth;
+    --primary-background: #0c074f;
+    --secondary-background: #2a257c;
+    --textColor: #000000;
+    --button-background: #fff;
+    --success-color: #1b9c07;
+    --error-color: #ef0707;
+}
+
+body {
+    background: var(--secondary-background);
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+  
+.success-message {
+    color: var(--success-color);
+    font-size: 1em;
+    margin-bottom: 10px;
+}
